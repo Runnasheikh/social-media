@@ -60,6 +60,7 @@ export async function POST(req) {
     } = evt?.data 
     try{
         await createOrUpdateUser(id,first_name,last_name,image_url,email_addresses,username)
+        console.log("update your database")
         return new Response('user is created or upadated', {
             status: 200
         })
